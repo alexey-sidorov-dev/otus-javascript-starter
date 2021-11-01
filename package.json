@@ -1,0 +1,63 @@
+{
+  "name": "otus-javascript-starter",
+  "version": "1.0.0",
+  "description": "OTUS Javascript Starter course",
+  "main": "index.js",
+  "scripts": {
+    "start": "ntl",
+    "test": "jest",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prettier": "prettier . --check",
+    "prettier:fix": "prettier . --write",
+    "prepare": "husky install"
+  },
+  "ntl": {
+    "descriptions": {
+      "start": "Script for starts \"ntl\" instead of \"start\"",
+      "test": "Run project's tests",
+      "lint": "Find problems with project's code",
+      "lint:fix": "Find and fix problems with project's code",
+      "prettier": "Check code format in all files",
+      "prettier:fix": "Format code in all files",
+      "prepare": "Install husky"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexey-sidorov-dev/otus-javascript-starter.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Alexey Sidorov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexey-sidorov-dev/otus-javascript-starter/issues"
+  },
+  "homepage": "https://github.com/alexey-sidorov-dev/otus-javascript-starter#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@types/jest": "^27.0.2",
+    "babel-jest": "^27.3.1",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jest": "^25.2.2",
+    "husky": "^7.0.4",
+    "jest": "^27.3.1",
+    "lint-staged": "^11.2.6",
+    "ntl": "^5.1.0",
+    "prettier": "^2.4.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md,yml}": "prettier --write"
+  }
+}
