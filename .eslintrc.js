@@ -16,10 +16,15 @@ module.exports = {
   },
   rules: {
     "import/prefer-default-export": "off",
+    "no-console": "off",
+    "no-alert": "off",
     "max-len": ["error", { ignoreComments: true, code: 120 }],
     "no-param-reassign": ["error", { props: false }],
     "no-plusplus": ["error", { allowForLoopAfterthoughts: true }],
-    "no-use-before-define": ["error", { functions: true, classes: true }],
+    "no-use-before-define": [
+      "error",
+      { functions: false, classes: true, variables: true },
+    ],
   },
   plugins: ["jest"],
 };
