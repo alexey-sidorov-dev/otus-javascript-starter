@@ -1,14 +1,8 @@
 import { printTotalLengthOfTwoStrings } from "./printTotalLengthOfTwoStrings";
 
 describe('check function "printTotalLengthOfTwoStrings"', () => {
-  const oldConsoleLog = jest.fn();
-
   beforeEach(() => {
-    console.log = jest.fn();
-  });
-
-  afterEach(() => {
-    console.log = oldConsoleLog;
+    jest.spyOn(console, "log");
   });
 
   it('print 6 for "qwerty" and ""', () => {

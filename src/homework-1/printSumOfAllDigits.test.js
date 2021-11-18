@@ -1,14 +1,8 @@
 import { printSumOfAllDigits } from "./printSumOfAllDigits";
 
 describe('check function "printSumOfAllDigits"', () => {
-  const oldConsoleLog = console.log;
-
   beforeEach(() => {
-    console.log = jest.fn();
-  });
-
-  afterEach(() => {
-    console.log = oldConsoleLog;
+    jest.spyOn(console, "log");
   });
 
   it('print 6 for "123"', () => {

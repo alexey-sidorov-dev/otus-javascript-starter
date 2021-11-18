@@ -1,14 +1,8 @@
 import { printProductAndSum } from "./printProductAndSum";
 
 describe('check function "printProductAndSum"', () => {
-  const oldConsoleLog = console.log;
-
   beforeEach(() => {
-    console.log = jest.fn();
-  });
-
-  afterEach(() => {
-    console.log = oldConsoleLog;
+    jest.spyOn(console, "log");
   });
 
   it("print 6 and 5 for 2 and 3", () => {
