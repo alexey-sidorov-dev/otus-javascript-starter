@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "ntl",
-    "test": "jest",
+    "test": "jest --coverage",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prettier": "prettier . --check",
