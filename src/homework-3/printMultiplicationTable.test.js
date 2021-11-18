@@ -1,14 +1,8 @@
 import { printMultiplicationTable } from "./printMultiplicationTable";
 
 describe('test function "printMultiplicationTable"', () => {
-  const oldConsoleLog = console.log;
-
   beforeEach(() => {
-    console.log = jest.fn();
-  });
-
-  afterEach(() => {
-    console.log = oldConsoleLog;
+    jest.spyOn(console, "log");
   });
 
   it("print multiplication table for 7", () => {

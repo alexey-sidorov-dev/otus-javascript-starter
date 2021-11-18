@@ -1,14 +1,8 @@
 import { printArithmeticAverageOfOdds } from "./printArithmeticAverageOfOdds";
 
 describe('check function "printArithmeticAverageOfOdds"', () => {
-  const oldConsoleLog = console.log;
-
   beforeEach(() => {
-    console.log = jest.fn();
-  });
-
-  afterEach(() => {
-    console.log = oldConsoleLog;
+    jest.spyOn(console, "log");
   });
 
   it('print 1 for "0"', () => {
