@@ -1,14 +1,8 @@
 import { printMonthForNumber } from "./printMonthForNumber";
 
 describe('check function "printMonthForNumber"', () => {
-  const oldConsoleLog = console.log;
-
   beforeEach(() => {
-    console.log = jest.fn();
-  });
-
-  afterEach(() => {
-    console.log = oldConsoleLog;
+    jest.spyOn(console, "log");
   });
 
   it('print "January" for "1"', () => {

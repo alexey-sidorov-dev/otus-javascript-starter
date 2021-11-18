@@ -1,14 +1,8 @@
 import { printMaxNumber } from "./printMaxNumber";
 
 describe('check function "printMaxNumber"', () => {
-  const oldConsoleLog = console.log;
-
   beforeEach(() => {
-    console.log = jest.fn();
-  });
-
-  afterEach(() => {
-    console.log = oldConsoleLog;
+    jest.spyOn(console, "log");
   });
 
   it("print 3 for 2 and 3", () => {
