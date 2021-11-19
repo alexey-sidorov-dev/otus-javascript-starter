@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "ntl",
-    "test": "jest --coverage",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prettier": "prettier . --check",
@@ -16,6 +17,7 @@
     "descriptions": {
       "start": "Script for starts \"ntl\" instead of \"start\"",
       "test": "Run project's tests",
+      "test:coverage": "Run project's tests with coverage",
       "lint": "Find problems with project's code",
       "lint:fix": "Find and fix problems with project's code",
       "prettier": "Check code format in all files",
