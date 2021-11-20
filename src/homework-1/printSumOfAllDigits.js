@@ -1,9 +1,8 @@
 /*
-  2.В двух переменных хранятся строки символов.
-  Написать программу, которая выведет в консоль
-  суммарное количество символов в обоих строках.
+  3*.Написать программу, которая запрашивает у
+  пользователя ввод трёхзначного числа, а потом
+  выводит в консоль сумму цифр введённого числа.
  */
-
 export function printSumOfAllDigits() {
   const providedNumberString = prompt("Enter a three digits number:");
   const sumOfAllDigits = providedNumberString
