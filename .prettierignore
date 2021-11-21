@@ -1,7 +1,6 @@
 node_modules
+coverage
 .idea
 out
-build
 dist
-coverage
-.eslintcache
+build
