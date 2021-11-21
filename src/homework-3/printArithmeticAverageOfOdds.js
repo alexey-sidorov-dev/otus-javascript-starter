@@ -1,3 +1,9 @@
+/*
+  3*. Запросить у пользователя ввод числа N. Вывести в
+  консоль среднее арифметическое всех нечётных
+  чисел от 1 до N .
+ */
+
 export function printArithmeticAverageOfOdds() {
   const providedNumberString = prompt("Enter a number:");
   console.log(getArithmeticAverageFromOfAllOdds(Number(providedNumberString)));
