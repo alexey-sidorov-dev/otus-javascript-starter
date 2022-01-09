@@ -1,4 +1,8 @@
-import { printLengthAndSquare } from "./printLengthAndSquare";
+import {
+  printLengthAndSquare,
+  calculateLength,
+  calculateSquare,
+} from "./printLengthAndSquare";
 
 describe("check function printLengthAndSquare", () => {
   beforeEach(() => {
@@ -23,9 +27,15 @@ describe("check function printLengthAndSquare", () => {
     );
   });
 
+  it("should print results for -4", () => {
+    jest.spyOn(window, "prompt").mockReturnValue("-4");
+    expect(() => calculateLength("-4")).toThrow();
+    expect(() => calculateSquare("-4")).toThrow();
+  });
+
   it("should print 0, 0  for asd", () => {
     jest.spyOn(window, "prompt").mockReturnValue("asd");
-    printLengthAndSquare();
-    expect(console.log).toHaveBeenCalledWith(0, 0);
+    expect(() => calculateLength("asd")).toThrow();
+    expect(() => calculateLength("asd")).toThrow();
   });
 });

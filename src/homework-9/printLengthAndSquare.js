@@ -5,11 +5,25 @@
 */
 
 export function printLengthAndSquare() {
-  const R = Number(prompt("Enter a number R:"));
-  // Проверяем, что пользователь ввёл число
-  if (R && !Number.isNaN(R)) {
-    console.log(2 * Math.PI * R, 4 * Math.PI * R ** 2);
-  } else {
-    console.log(0, 0);
+  const radius = prompt("Enter a radius:");
+
+  console.log(calculateLength(radius), calculateSquare(radius));
+}
+
+export function calculateLength(input) {
+  const radius = +input;
+  if (radius && !Number.isNaN(radius) && radius > 0) {
+    return 2 * Math.PI * radius;
   }
+
+  throw new Error("Radius must be positive number!");
+}
+
+export function calculateSquare(input) {
+  const radius = +input;
+  if (radius && !Number.isNaN(radius) && radius > 0) {
+    return 4 * Math.PI * radius ** 2;
+  }
+
+  throw new Error("Radius must be positive number!");
 }
