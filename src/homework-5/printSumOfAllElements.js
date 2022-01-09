@@ -5,10 +5,6 @@
 
 export function printSumOfAllElements() {
   const arr = [1, 3, 5, 7, 9, 13, 29, 36, 42, 49];
-  let sum = 0;
-  arr.forEach((element) => {
-    sum += element;
-  });
 
-  console.log(sum);
+  console.log(arr.reduce((accumulator, number) => accumulator + number));
 }
