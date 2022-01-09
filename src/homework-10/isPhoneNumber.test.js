@@ -15,9 +15,4 @@ describe("check function isPhoneNUmber", () => {
     jest.spyOn(window, "prompt").mockReturnValue("asd");
     expect(isPhoneNUmber()).not.toBeTruthy();
   });
-
-  it("should return false for null", () => {
-    jest.spyOn(window, "prompt").mockReturnValue(null);
-    expect(isPhoneNUmber()).not.toBeTruthy();
-  });
 });

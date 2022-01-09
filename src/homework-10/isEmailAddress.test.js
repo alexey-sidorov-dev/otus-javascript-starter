@@ -15,9 +15,4 @@ describe("check function isEmailAddress", () => {
     jest.spyOn(window, "prompt").mockReturnValue("asd");
     expect(isEmailAddress()).not.toBeTruthy();
   });
-
-  it("should return false for null", () => {
-    jest.spyOn(window, "prompt").mockReturnValue(null);
-    expect(isEmailAddress()).not.toBeTruthy();
-  });
 });

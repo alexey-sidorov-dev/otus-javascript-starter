@@ -15,9 +15,4 @@ describe("check function isDate", () => {
     jest.spyOn(window, "prompt").mockReturnValue("asd");
     expect(isDate()).not.toBeTruthy();
   });
-
-  it("should print 0, 0  for null", () => {
-    jest.spyOn(window, "prompt").mockReturnValue(null);
-    expect(isDate()).not.toBeTruthy();
-  });
 });
